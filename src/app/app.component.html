@@ -1,0 +1,64 @@
+<header>
+  <h1>Gestion de Torneos</h1>
+  <span class="status" [class.ok]="apiConectada" [class.error]="!apiConectada">
+    {{ apiConectada ? 'API conectada' : 'API sin conexion' }}
+  </span>
+</header>
+
+<main>
+  <section>
+    <h2>Registrar torneo</h2>
+    <form (ngSubmit)="crearTorneo()" #torneoForm="ngForm">
+      <label>
+        Nombre
+        <input name="nombre" [(ngModel)]="torneo.nombre" required>
+      </label>
+      <label>
+        Deporte
+        <input name="deporte" [(ngModel)]="torneo.deporte" required>
+      </label>
+      <label>
+        Fecha inicio
+        <input name="fechaInicio" type="date" [(ngModel)]="torneo.fechaInicio" required>
+      </label>
+      <label>
+        Ciudad
+        <input name="ciudad" [(ngModel)]="torneo.ciudad" required>
+      </label>
+      <button class="primary" type="submit" [disabled]="torneoForm.invalid">Guardar torneo</button>
+    </form>
+    <p class="message">{{ mensaje }}</p>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <h2>Torneos registrados</h2>
+      <button type="button" (click)="listarTorneos()">Actualizar</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Deporte</th>
+            <th>Fecha inicio</th>
+            <th>Ciudad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="torneos.length === 0">
+            <td colspan="5">No hay torneos registrados</td>
+          </tr>
+          <tr *ngFor="let torneo of torneos">
+            <td>{{ torneo.id }}</td>
+            <td>{{ torneo.nombre }}</td>
+            <td>{{ torneo.deporte }}</td>
+            <td>{{ torneo.fechaInicio }}</td>
+            <td>{{ torneo.ciudad }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
