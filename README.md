@@ -14,5 +14,6 @@
 
 ### Endpoint usado por la tabla
 
-<img width="379" height="519" alt="image" src="https://github.com/user-attachments/assets/7c17e0e1-3550-4c83-b8df-5afd7e66cf72" />
+<img width="290" height="410" alt="image" src="https://github.com/user-attachments/assets/3f4e0f27-6ff4-479c-99f3-fcae7c8a727e" />
+
 
