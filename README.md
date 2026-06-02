@@ -1,4 +1,4 @@
-<img width="1082" height="486" alt="image" src="https://github.com/user-attachments/assets/f79deff4-3cb8-4d65-9b81-0279be240ba4" /># ParcialWebRepo2
+# ParcialWebRepo2
 ## Pruebas y evidencias
 
 
